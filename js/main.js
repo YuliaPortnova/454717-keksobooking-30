@@ -4,7 +4,7 @@ import { request } from './api.js';
 import { renderStatus } from './status.js';
 import { throttle } from './utilities.js';
 
-const BASE_URL = 'https://30.javascript.pages.academy/keksobooking';
+const BASE_URL = 'https://30.javascript.htmlacademy.pro/keksobooking';
 const resetButton = document.querySelector('.ad-form__reset');
 
 let announcements;
