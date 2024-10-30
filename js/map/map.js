@@ -5,8 +5,16 @@ const TILE_LAYER = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const COPYRIGHT = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const ZOOM = 13;
 
+const mainJs = document.querySelector('script[src="js/main.js"]');
+// hack for local build with vite
+const devMainJs = mainJs.src.replace('client', 'main.js');
+const imgPath = devMainJs.replace('main.js', '../img');
+
 const iconConfig = {
-  url: {main: '../img/main-pin.svg', normal: '../img/pin.svg'},
+  url: {
+    main: `${imgPath}/main-pin.svg`,
+    normal: `${imgPath}/pin.svg`
+  },
   width: {main: 52, normal: 40},
   height: {main: 52, normal: 40},
   anchorX: {main: 26, normal: 20},
